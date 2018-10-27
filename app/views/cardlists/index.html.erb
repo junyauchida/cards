@@ -15,12 +15,14 @@
 				<th></th>
 				<th></th>
 				<th></th>
+				<th></th>
 			</tr>
 		</thead>
 		<tbody>
 			<% @cardlists.each do |c| %>
 			<tr>
 				<td><%= c.cardlist_name %></td>
+				<td>いいねの数</td>
 				<td><%= link_to "学習", cardlist_path(c.id) %></td>
 				<td><%= link_to "編集", edit_cardlist_path(c.id) %></td>
 				<td><%= link_to "削除", cardlist_path(c.id), method: :delete, "data-confirm"=>"本当に削除しますか？" %></td>
